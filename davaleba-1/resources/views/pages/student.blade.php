@@ -1,11 +1,12 @@
 @extends('layouts.app')
-@section('title','post')
+@section('title','student')
 @section('content')
 <div>
     @include('components.links')
 </div><br>
 <div>
-    {{ $title }}
+    {{ $student->title }}
+    {{ $student->body }}
 </div>
-    
+
 @endsection

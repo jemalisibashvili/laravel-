@@ -1,21 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function showBlog(Request $request)
+    public function students(Request $request)
     {
-
-        return view('pages.blog');
+        return view('pages.students',['students' =>Student::paginate(10)]);
 
     }
-    public function showPost(Request $request)
+    public function student(Student $student)
     {
-        $data['slug'] = $request->slug;
-        $data['title'] = str_replace("_"," ", $request->slug);
-        return view('pages.post',$data);
+        return view('pages.student',['student' => $student]);
     }
+
+
 }

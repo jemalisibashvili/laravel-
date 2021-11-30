@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,6 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::get('/blog',[BlogController::class,'showBlog'])->name('blog');
-Route::get('/post/{slug}',[BlogController::class,'showPost'])->name('viewPosts');
+Route::get('/students',[BlogController::class,'students'])->name('students');
+Route::get('/student/{student:slug}',[BlogController::class,'student'])->name('student');
 
